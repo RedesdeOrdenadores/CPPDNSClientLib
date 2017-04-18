@@ -50,7 +50,7 @@ namespace ro1617 {
             
             // Check compression 
             if ((size & 0xc0) == 0xc0) {
-                uint16_t offset = ((size & 0x37) << 8) | *cbegin++;
+                uint16_t offset = ((size & 0x3f) << 8) | *cbegin++;
                 if (lastbyte != nullptr && lastbyte_updated == false) {
                     *lastbyte = cbegin;
                     lastbyte_updated = true;
