@@ -1,4 +1,5 @@
 # Librería de soporte a la aplicación DNS
+[![Build Status](https://travis-ci.org/RedesdeOrdenadores/CPPDNSClientLib.svg?branch=master)](https://travis-ci.org/RedesdeOrdenadores/CPPDNSClientLib)
 
 ## Introducción
 Se proporcionaba una librería escrita en C++ para la creación de aplicaciones

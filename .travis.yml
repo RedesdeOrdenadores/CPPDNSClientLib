@@ -1,0 +1,29 @@
+language: cpp
+dist: trusty
+sudo: required
+script: cmake . && make
+  
+matrix:
+  include:
+# Disable, as clang-6 is currently uninstalable on travis
+#    - os: linux
+#      addons:
+#        apt:
+#          sources:
+#            - llvm-toolchain-trusty-6.0
+#          packages:
+#            - clang-6.0
+#      env:
+#        - MATRIX_EVAL="CC=clang-6.0 && CXX=clang++-6.0"
+    - os: linux
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - g++-7
+      env:
+        - MATRIX_EVAL="CC=gcc-7 && CXX=g++-7"
+        
+before_install:
+    - eval "${MATRIX_EVAL}"
