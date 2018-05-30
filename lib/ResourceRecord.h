@@ -36,6 +36,7 @@ namespace ro1617 {
         MX = 15, // mail exchange
         TXT = 16, // text strings
         AAAA = 28, // an IPv6 host address
+	OPT = 41, // For EDNS support
     };
 
     enum RRClass : uint16_t {
